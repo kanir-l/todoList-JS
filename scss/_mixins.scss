@@ -1,0 +1,10 @@
+@mixin main-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-border {
+    border: 0;
+    border-radius: 3px;
+}
