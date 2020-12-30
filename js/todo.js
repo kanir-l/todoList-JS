@@ -1,23 +1,24 @@
-/*array of default list*/
+/*array of list*/
 let listArr = [];
-let defaultList = listArr;
+let allList = listArr;
 
-/*array of list that are checked*/
+/*array of list that are checked in LS*/
 let completedList = [];
 let lsCompletedList = localStorage.getItem("completedList");
 if(lsCompletedList){completedList = JSON.parse(lsCompletedList);}
 
-/*array of list that are added*/
+/*array of list that are added in LS*/
 let addedList = [];
 let lsAddedList = localStorage.getItem("addedList");
 if(lsAddedList){addedList = JSON.parse(lsAddedList);}
 
 /*class object*/
 class ListOb {
-    constructor(list, checked) {
+    constructor(list, checked, permanent = false) {
         if(list){
             this.list = list;
             this.checked = checked;
+            this.permanent = permanent;
             listArr.push(this);
         }else{
             alert("No list to add. Please fill in one")
@@ -26,12 +27,12 @@ class ListOb {
     }; 
  };
 
-new ListOb("Netflix reward", false);
-new ListOb("Routine walk", false);
-new ListOb("Meditation", false);
-new ListOb("House and kids work", false);
-new ListOb("Call mom", false);
-new ListOb("An hour code", false);
+new ListOb("Netflix reward", false, true);
+new ListOb("Routine walk", false, true);
+new ListOb("Meditation", false, true);
+new ListOb("House and kids work", false, true);
+new ListOb("Call mom", false, true);
+new ListOb("An hour code", false, true);
 
 /*for loop the added list*/
 for (let i = 0; i < addedList.length; i++) {
@@ -63,7 +64,7 @@ function todoIndex() {
     container.appendChild(sortButton);
 
     sortButton.addEventListener("click", () => {  
-        defaultList.sort(comparingList); 
+        allList.sort(comparingList); 
         ulElement.innerHTML = "";
         toDoList(ulElement);
     });
@@ -72,7 +73,7 @@ function todoIndex() {
     let ulElement = document.createElement("ul");
     container.appendChild(ulElement);
 
-    /*li - for loop function for the default list*/
+    /*li - for loop function for the list*/
     toDoList(ulElement);
 
     /*add input*/
@@ -112,9 +113,9 @@ function todoIndex() {
 
 /*function*/
 function toDoList(ulElement) {
-    for (let i = 0; i < defaultList.length; i++) {
+    for (let i = 0; i < allList.length; i++) {
         let liElement = document.createElement("li");
-        liElement.innerHTML = defaultList[i].list;
+        liElement.innerHTML = allList[i].list;
 
         let checkBox = document.createElement("input");
         checkBox.type = "checkbox";
@@ -124,11 +125,29 @@ function toDoList(ulElement) {
 
         liElement.appendChild(checkBox);
 
+        if(!allList[i].permanent){
+            let deleteButton = document.createElement("button")
+            deleteButton.className = "delete-button";
+            deleteButton.id = "delete-button";
+            deleteButton.addEventListener("click", () => {
+        
+                addedList.splice(addedList.indexOf(allList[i].list), 1)
+                localStorage.setItem("addedList", JSON.stringify(addedList));
+
+                allList.splice(i, 1);
+                
+                ulElement.innerHTML = "";
+                toDoList(ulElement)
+            })
+
+            liElement.appendChild(deleteButton);
+        }
+
         checkBox.addEventListener("click", () => { 
             checkingList(checkBox);
         });
 
-        if (completedList.includes(defaultList[i].list)) { 
+        if (completedList.includes(allList[i].list)) { 
             checkBox.checked = true;
 
             let liChecked = checkBox.parentNode;

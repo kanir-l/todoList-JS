@@ -53,7 +53,20 @@ body {
                 margin-left: -20px;
                 background-color: $light-bg-grey;
                 border-radius: 6px;
-                text-overflow: elipsis;  
+                text-overflow: elipsis;
+                display: flex;
+
+                .delete-button{
+                    background: transparent;
+                    background-image: url('../img/garbage.svg');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 100%;
+                    border: 0px solid transparent;
+                    outline: none;
+                    margin-left: auto;
+                    text-decoration: none;
+                }
             }
         }
 
