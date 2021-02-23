@@ -189,3 +189,10 @@ function comparingList(a, b) {
         return 0;
     }
 };
+
+
+fetch('http://localhost:8000/')
+  .then(response => response.json())
+  .then((data) => {
+    console.log(data);
+  });

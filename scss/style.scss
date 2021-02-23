@@ -3,13 +3,20 @@
 
 body {
     width: 100%;
+    height: 100vh;
+    background-color: $medium-bg-grey;
     margin: 0;
     font-family: $main-font-family;
     @include main-flex;
 
     #todo-container {
-        width: 300px;
+        width: 100%;
+        height: auto;
         background-color: $medium-bg-grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
         h1, h2 {
             text-transform: uppercase;
@@ -32,23 +39,27 @@ body {
             width: 45px;
             height: 30px;
             display: block;
-            margin-left: auto;
-            margin-right: 20px;
             @include button-border;
         }
 
         ul {
-            width: 80%;
+            width: 60%;
             height: auto;
             margin: auto 0;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
 
             li {
-                width: 100%;
+                width: 60%;
+                height: 30px;
                 font-size: $main-font-size;
                 list-style: none;
                 color: $main-font-color;
                 padding: 10px;
+                padding-top: 30px;
                 margin: 10px;
                 margin-left: -20px;
                 background-color: $light-bg-grey;
@@ -74,11 +85,13 @@ body {
             width: 100%;
             height: 60px;
             margin-bottom: 20px;
+            margin-top: 30px;
             @include main-flex;
+            justify-content: center;
 
             #addlist-box {
-                width: 180px;
-                height: 45px;
+                width: 30%;
+                height: 60px;
                 background-color: $dark-bg-grey;
                 font-family: $main-font-family;
                 color: $main-font-color;
