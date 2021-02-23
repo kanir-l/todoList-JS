@@ -2,21 +2,20 @@
 /*Background*/
 body {
   width: 100%;
-  height: 100vh;
-  background-color: #666666;
   margin: 0;
   font-family: "Lato", sans-serif;
+  background-color: #666666;
   display: flex;
   justify-content: center;
   align-items: center; }
   body #todo-container {
-    width: 100%;
-    height: auto;
+    width: 600px;
     background-color: #666666;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
     body #todo-container h1, body #todo-container h2 {
       text-transform: uppercase;
       font-size: 22px;
@@ -31,30 +30,26 @@ body {
       text-transform: uppercase;
       color: #ffffff;
       background-color: #545454;
-      width: 45px;
+      width: 60px;
       height: 30px;
       display: block;
+      margin-left: auto;
+      margin-right: 49px;
       border: 0;
       border-radius: 3px; }
     body #todo-container ul {
-      width: 60%;
+      width: 80%;
       height: auto;
       margin: auto 0;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start; }
+      overflow: hidden; }
       body #todo-container ul li {
-        width: 60%;
-        height: 30px;
+        width: 100%;
         font-size: 12px;
         list-style: none;
         color: #ffffff;
         padding: 10px;
-        padding-top: 30px;
         margin: 10px;
-        margin-left: -20px;
+        margin-left: -30px;
         background-color: #6d6d6d;
         border-radius: 6px;
         text-overflow: elipsis;
@@ -70,17 +65,16 @@ body {
           margin-left: auto;
           text-decoration: none; }
     body #todo-container .add-container {
-      width: 100%;
+      width: 83%;
       height: 60px;
       margin-bottom: 20px;
-      margin-top: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
-      justify-content: center; }
+      justify-content: start; }
       body #todo-container .add-container #addlist-box {
-        width: 30%;
-        height: 60px;
+        width: 450px;
+        height: 45px;
         background-color: #545454;
         font-family: "Lato", sans-serif;
         color: #ffffff;

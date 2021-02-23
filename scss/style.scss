@@ -3,20 +3,19 @@
 
 body {
     width: 100%;
-    height: 100vh;
-    background-color: $medium-bg-grey;
     margin: 0;
     font-family: $main-font-family;
+    background-color: $medium-bg-grey;
     @include main-flex;
 
     #todo-container {
-        width: 100%;
-        height: auto;
+        width: 600px;
         background-color: $medium-bg-grey;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
+        align-items: center;
 
         h1, h2 {
             text-transform: uppercase;
@@ -36,32 +35,28 @@ body {
             text-transform: uppercase;
             color: $main-font-color;
             background-color: $dark-bg-grey;
-            width: 45px;
+            width: 60px;
             height: 30px;
             display: block;
+            margin-left: auto;
+            margin-right: 49px;
             @include button-border;
         }
 
         ul {
-            width: 60%;
+            width: 80%;
             height: auto;
             margin: auto 0;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: start;
 
             li {
-                width: 60%;
-                height: 30px;
+                width: 100%;
                 font-size: $main-font-size;
                 list-style: none;
                 color: $main-font-color;
                 padding: 10px;
-                padding-top: 30px;
                 margin: 10px;
-                margin-left: -20px;
+                margin-left: -30px;
                 background-color: $light-bg-grey;
                 border-radius: 6px;
                 text-overflow: elipsis;
@@ -82,16 +77,15 @@ body {
         }
 
         .add-container {
-            width: 100%;
+            width: 83%;
             height: 60px;
             margin-bottom: 20px;
-            margin-top: 30px;
             @include main-flex;
-            justify-content: center;
+            justify-content: start;
 
             #addlist-box {
-                width: 30%;
-                height: 60px;
+                width: 450px;
+                height: 45px;
                 background-color: $dark-bg-grey;
                 font-family: $main-font-family;
                 color: $main-font-color;
@@ -118,8 +112,3 @@ body {
         }
     }
 }
-
-
-
-
-
