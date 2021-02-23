@@ -9,13 +9,14 @@ body {
     @include main-flex;
 
     #todo-container {
-        width: 600px;
+        width: 80%;
         background-color: $medium-bg-grey;
         border: 1px solid #ffffff;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 30px 0 30px 0;
 
         h1, h2 {
             text-transform: uppercase;
@@ -39,7 +40,7 @@ body {
             height: 30px;
             display: block;
             margin-left: auto;
-            margin-right: 49px;
+            margin-right: 100px;
             @include button-border;
         }
 
@@ -55,7 +56,7 @@ body {
                 list-style: none;
                 color: $main-font-color;
                 padding: 10px;
-                margin: 10px;
+                margin: 20px 0 20px 0;
                 margin-left: -30px;
                 background-color: $light-bg-grey;
                 border-radius: 6px;
@@ -77,14 +78,14 @@ body {
         }
 
         .add-container {
-            width: 83%;
+            width: 82%;
             height: 60px;
             margin-bottom: 20px;
             @include main-flex;
             justify-content: start;
 
             #addlist-box {
-                width: 450px;
+                width: 900px;
                 height: 45px;
                 background-color: $dark-bg-grey;
                 font-family: $main-font-family;

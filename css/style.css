@@ -9,13 +9,14 @@ body {
   justify-content: center;
   align-items: center; }
   body #todo-container {
-    width: 600px;
+    width: 80%;
     background-color: #666666;
     border: 1px solid #ffffff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    padding: 30px 0 30px 0; }
     body #todo-container h1, body #todo-container h2 {
       text-transform: uppercase;
       font-size: 22px;
@@ -34,7 +35,7 @@ body {
       height: 30px;
       display: block;
       margin-left: auto;
-      margin-right: 49px;
+      margin-right: 100px;
       border: 0;
       border-radius: 3px; }
     body #todo-container ul {
@@ -48,7 +49,7 @@ body {
         list-style: none;
         color: #ffffff;
         padding: 10px;
-        margin: 10px;
+        margin: 20px 0 20px 0;
         margin-left: -30px;
         background-color: #6d6d6d;
         border-radius: 6px;
@@ -65,7 +66,7 @@ body {
           margin-left: auto;
           text-decoration: none; }
     body #todo-container .add-container {
-      width: 83%;
+      width: 82%;
       height: 60px;
       margin-bottom: 20px;
       display: flex;
@@ -73,7 +74,7 @@ body {
       align-items: center;
       justify-content: start; }
       body #todo-container .add-container #addlist-box {
-        width: 450px;
+        width: 900px;
         height: 45px;
         background-color: #545454;
         font-family: "Lato", sans-serif;
