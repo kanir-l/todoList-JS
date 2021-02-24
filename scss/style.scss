@@ -48,7 +48,7 @@ body {
         ul {
             width: 80%;
             height: 300px;
-            background: $dark-bg-grey;
+            background: $medium-bg-grey;
             margin: auto 0;
             overflow: hidden;
             overflow-y: auto;
@@ -59,13 +59,13 @@ body {
             flex-direction: column;
 
             li {
-                width: 90%;
+                width: 100%;
                 font-size: $main-font-size;
                 list-style: none;
                 color: $main-font-color;
                 padding: 10px;
                 margin: 10px 0 10px 0;
-                background-color: $light-bg-grey;
+                background-color: $dark-bg-grey;
                 border-radius: 6px;
                 text-overflow: elipsis;
                 display: flex;
